@@ -1,3 +1,5 @@
+# https://youtu.be/5sXFJO0SqmY
+    
 gameplay.time_add(12*1000)
 agent.teleport(world(1000, 0, 0), WEST)
 
