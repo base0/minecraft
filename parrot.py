@@ -1,3 +1,6 @@
+# https://youtu.be/Gy3S2wsFOqc
+
+
 for index in range(6):
     shapes.circle(GLASS,
         positions.add(player.position(), pos(0, index, 0)),
