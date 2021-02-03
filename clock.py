@@ -28,15 +28,17 @@ import time
 
 xs = [0, 4, 10, 14]
 
-world.set(pos(8, 8, 0), 'slime')
-world.set(pos(8, 6, 0), 'slime')
+TOP = 10
+
+world.set(pos(8, TOP - 1, 0), 'slime')
+world.set(pos(8, TOP - 3, 0), 'slime')
 
 now = datetime.now()
 h = now.hour
 m = now.minute
 digits = [h//10, h%10, m//10, m%10]
 for d, x in zip(digits, xs):
-    draw_d(d, x, 9, 0)
+    draw_d(d, x, TOP, 0)
     
 prev_digits = [d for d in digits]
 while True:
@@ -48,7 +50,7 @@ while True:
     #say(' '.join([str(d) for d in digits]))
     for d, pd, x in zip(digits, prev_digits, xs):
         if d != pd:
-            destroy(pd, x, 9, 0)
-            draw_d(d, x, 9, 0)
+            destroy(pd, x, TOP, 0)
+            draw_d(d, x, TOP, 0)
     prev_digits = [d for d in digits]
     time.sleep(10)
