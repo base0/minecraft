@@ -1,6 +1,6 @@
 
 # this list is obtained from vanilla.json in Minecraft Education Edition
-text_list = ["air",
+names = ["air",
 "stone",
 "grass",
 "dirt",
@@ -457,15 +457,10 @@ text_list = ["air",
 "lantern"    
 ]
 
-index = 0
-def on_travelled_walk():
-    global index
-    
-    blocks.place(AIR, world(2, 5, 0))
-    blocks.place(AIR, world(2, 4, 0))
+for index in range(len(names)):
     blocks.place(index, world(2, 4, 0))
-    player.say(text_list[index])
-    index = index + 1
+    player.say(index + ' ' + names[index])
+    loops.pause(3000)
+    gameplay.time_set(DayTime.Day)
+    
 
-
-player.on_travelled(WALK, on_travelled_walk)
