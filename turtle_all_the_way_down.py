@@ -1,4 +1,4 @@
-# https://youtu.be/3AT3mS0k5iQ
+# https://youtu.be/YJztJd3IodM
 ground = 3
 gameplay.time_set(DayTime.Day)
 #player.teleport(world(10, ground, 0))
