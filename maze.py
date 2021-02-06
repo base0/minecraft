@@ -1,4 +1,4 @@
-# https://youtu.be/dB48sTdZe3c
+# https://youtu.be/FnwBV-8xNWM
 n = 10
 a = [[0]*(n+2) for i in range(n+2)]
 for i in range(n+2):
