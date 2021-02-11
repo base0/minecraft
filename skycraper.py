@@ -1,13 +1,14 @@
+# https://youtu.be/5g46_MTbch4
+
 player_position = player.position()
 player.say(player_position)
-player.teleport(pos(-20, 0, 10))
+player.teleport(pos(-33, 79, 9))
 flr = [
     '100000000000002001',
     '100000000000020001',
     '100000000000200001',
     '111000011111111111',
 ]
-
 
 t = []
 for i in range(len(flr)):
@@ -22,9 +23,9 @@ for i in range(len(flr)):
         s += tmp[len(tmp) - 1 - j]
     even_flr.append(s)
 
-
+TOTAL_FLOOR = 20
 DEPTH = 5
-for FL in range(60):
+for FL in range(TOTAL_FLOOR):
     for x in range(DEPTH):
         for y in range(len(flr)):
             for z in range(len(flr[0])):
