@@ -1,3 +1,5 @@
+# https://youtu.be/jVfmjPyTnt4
+    
 def on_on_chat(n):
     p = player.position()
     player.teleport(positions.add(p, pos(-130, 103, 38)))   # p 100
