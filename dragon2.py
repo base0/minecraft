@@ -37,21 +37,17 @@ shapes.line(RED_CONCRETE, offset(0, 0, 0), offset(0, ROUND * 9 * radius, 0))
 y = radius / 2
 for i in range(ROUND*len(xs)):
     b = LIME_GLAZED_TERRACOTTA #GRASS if i < 8 else GOLD_BLOCK
-    x = spiral_radius * xs[i%9]
-    z = spiral_radius * zs[i%9]
-    player.say(x+' ' + y + ' '  + z)
+    x = spiral_radius * xs[i%len(xs)]
+    z = spiral_radius * zs[i%len(zs)]
+    #player.say(x+' ' + y + ' '  + z)
     shapes.sphere(b, offset(x, y, z), radius, ShapeOperation.OUTLINE)
     y += dy
-
-# z back->front
-# x right->left
 
 # head
 radius -= 1
 y -= dy
 d = radius + 2
 blocks.fill(LIME_GLAZED_TERRACOTTA, offset(x - radius, y - d, z), offset(x + radius, y + d-1, z + radius * 2 + 2))
-
 
 # mouth
 blocks.fill(YELLOW_GLAZED_TERRACOTTA, offset(x - radius, y - d, z + radius * 2 - 2), offset(x + radius, y, z + radius * 5))
