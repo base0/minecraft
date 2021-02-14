@@ -26,11 +26,6 @@ for i in range(MAX):
     x += 0.87*RADIUS*2
     z += 0.5*RADIUS*2
 
-x = 0.87 * RADIUS * 2 * (MAX-1)
-z = 0
-for y in range(1):
-    shapes.circle(STONE_BRICKS, rpos(x, y, z), RADIUS * (MAX+1), Axis.Y, ShapeOperation.OUTLINE)
-
 d = RADIUS * (MAX+1)-1
 for rx in range(-d, d):
     for rz in range(-d, d):
