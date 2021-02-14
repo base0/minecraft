@@ -1,4 +1,6 @@
 # https://youtu.be/e5oibdlBzOo
+
+# set game mode to Easy
 gameplay.time_set(DayTime.NIGHT)
 
 player_position = player.position()
