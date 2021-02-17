@@ -1,4 +1,4 @@
-# https://youtu.be/coQzNR_-R9Y
+# https://youtu.be/PIGPp_At83g
 player_position = player.position()
 
 def rpos(x, y, z):
@@ -17,10 +17,10 @@ def infinite_repeater():
     blocks.place(REDSTONE_WIRE, rpos(-1,0,2))
     blocks.place(REDSTONE_WIRE, rpos(-1,0,1))
     blocks.place(REDSTONE_WIRE, rpos(-1,0,0))
+    blocks.place(PISTON, rpos(0,0,3))
     blocks.place(REDSTONE_TORCH, rpos(-2,0,0))
     loops.pause(10)
     blocks.place(AIR, rpos(-2,0,0))
-    blocks.place(PISTON, rpos(0,0,3))
 
 
 
@@ -30,6 +30,7 @@ def infinite_repeater():
 
 while True:
     player_position = positions.add(player_position, pos(7,0,0))
+    loops.pause(1000)
     infinite_repeater()
 
 
