@@ -2,9 +2,19 @@
 
 แบ่งการสร้างของเป็น 3 กลุ่ม
 
-1.สร้างจากแปลนในกระดาษ
+## สร้างจากแปลนในกระดาษ
 
-[underwater house](underwater house)
+- [underwater house](underwater house) [code]()
+- []() [code]()
+- - []() [code]()
 
-2.
-3.
+## สร้างจากแบบแปลน
+
+## สร้างจาก algorithm
+
+## หนังสั้น
+
+
+
+
+
