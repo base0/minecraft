@@ -4,6 +4,6 @@
 
 1.สร้างจากแปลนในกระดาษ
 
-[underwater house](underwater house)
+(underwater house)[underwater house]
 2.
 3.
