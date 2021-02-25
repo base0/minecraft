@@ -1,3 +1,4 @@
+gameplay.time_set(DayTime.Day)
 gameplay.set_weather(CLEAR)
 
 player_position = player.position()
