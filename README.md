@@ -4,7 +4,7 @@
 
 ## สร้างจากแปลนในกระดาษ
 
-- [underwater house](underwater house) [code]()
+- [https://www.youtube.com/watch?v=BYXTgNNIjBw] [https://github.com/base0/minecraft/blob/main/underwater_house.py]
 - []() [code]()
 - - []() [code]()
 
