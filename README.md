@@ -17,14 +17,14 @@
 - [ธงชาติ](https://www.youtube.com/watch?v=I8pXhIqS3zU) [code](https://github.com/base0/minecraft/blob/main/flag.py)
 
 ## สร้างจาก algorithm
+- [pyramid](https://youtu.be/0QdXh7hHHcA) [code](https://github.com/base0/minecraft/blob/main/extreme_pyramid.py)
 - [มังกร](https://www.youtube.com/watch?v=7DONth96xmI) [code](https://github.com/base0/minecraft/blob/main/dragon.py)
 - [maze](https://www.youtube.com/watch?v=FnwBV-8xNWM) [code](https://github.com/base0/minecraft/blob/main/maze.py)
-- [pyramid](https://www.youtube.com/channel/UCNt1ZJqAn6F1cJdiGeBzHWw/videos) [code](https://github.com/base0/minecraft/blob/main/extreme_pyramid.py)
 
 ## หนังสั้น
+- [inspired by Elsa](https://www.youtube.com/watch?v=5HwyshXx2tk) [code](https://github.com/base0/minecraft/blob/main/creating_stair_steps.py)
 - [คาถาสู้ซอมบี้](https://youtu.be/NaaN2haefPI) [code](https://github.com/base0/minecraft/blob/main/spell.py)
 - [หนังสยองขวัญ](https://www.youtube.com/watch?v=-RDu9m1bmWk) [code](https://github.com/base0/minecraft/blob/main/zombie_horror.py)
-- [inspired by Elsa](https://www.youtube.com/watch?v=5HwyshXx2tk) [code](https://github.com/base0/minecraft/blob/main/creating_stair_steps.py)
 
 
 
