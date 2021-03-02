@@ -1,17 +1,7 @@
-# https://youtu.be/YJztJd3IodM
+# https://youtu.be/hJLD3yX5148
 
 gameplay.time_set(DayTime.Day)
-#player.teleport(world(10, ground, 0))
 
-'''
-t = [['222200','222200','222200','222200','222200'],
-     ['222200','222200','222211','222200','222200'],
-     ['100100','000000','000000','000000','100100'],]
-
-t = [['000000','022200','022200','022200','000000'],
-     ['111100','022200','022211','022200','111100'],
-     ['100100','000000','000000','000000','100100'],]
-'''
 t = [['00000','20000','22200','20000','00000'],
      ['00000','11100','11111','11100','00000',],
      ['10100','00000','00000','00000','10100'],]
@@ -53,14 +43,14 @@ def turtle_all_the_way(total_turtle):
         build(i+1, h-1, (width - (i+1)*len(t[0]))//2)
 
 def bg():
+    total_turtle = 3
     while True:
-        total_turtle = 2
+        loops.pause(10*1000)
         h = 0
         for j in range(total_turtle):
             h += (j+1)*3
         width = total_turtle * len(t[0])
-        mobs.spawn(SEA_TURTLE, rpos(width//2 - 1, h, 3))
-        loops.pause(1000)
+        mobs.spawn(SEA_TURTLE, rpos(width//2, h-1, 4))
 
 
 loops.run_in_background(bg)
