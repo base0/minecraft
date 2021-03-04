@@ -1,5 +1,3 @@
-# https://youtu.be/hK5EgsEdS2U
- 
 sin60 = 0.866
 cos60 = 0.5
 
