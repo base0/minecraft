@@ -20,35 +20,37 @@ def triangle(top, base_width, x, b):
     shapes.line(b, rpos(x, top, 0), rpos(x, top-r*sin60, -h_base))
     shapes.line(b, rpos(x, top-r*sin60, -h_base), rpos(x, top-r*sin60, h_base))
 
-
-
 top = 28
 length = 22
 bottom = 8
 ceiling = bottom
-roof(top, bottom, 0, length)
-roof(top-3, bottom, -4, length + 8)
+roof(top, bottom, 0, length, 0, -1) # 0 -1 means no skip
+roof(top-3, bottom, -4, length + 8, 1, length-2)
 
+#roof(top, bottom, 0, 6, 0, -1) # 0 -1 means no skip
+#roof(top-3, bottom, -4, 6 + 8, 1, 5-1)
 
 #base_width = 20
 #h_base = base_width // 2
 #r = h_base / sin30
 #ceiling = top-r*sin60
 
-def roof(top, bottom, x_start, length):
+def roof(top, bottom, x_start, length, skip_start, skip_end):
     # roof
     h_base = (top-bottom) * tan30
     base_width = h_base*2
     ceiling = bottom +1
 
-    for i in range(length):
-        if i == 0 or i == length - 1:
+    for i in range(x_start, x_start+length):
+        if skip_start <= i <= skip_end:
+            continue
+        if i == x_start or i == x_start+length - 1:
             b = BLOCK_OF_QUARTZ
-        elif i == 1 or i == length - 2:
+        elif i == x_start+1 or i == x_start+length - 2:
             b = GREEN_WOOL
         else:
             b = ORANGE_WOOL
-        triangle(top, base_width, i+x_start, b)
+        triangle(top, base_width, i, b)
 
     shapes.line(BLOCK_OF_QUARTZ, rpos(0+x_start, top, 0), rpos(length-1+x_start, top, 0))
     shapes.line(BLOCK_OF_QUARTZ, rpos(0+x_start, ceiling, -h_base), rpos(length-1+x_start, ceiling, -h_base))
@@ -74,12 +76,15 @@ def roof(top, bottom, x_start, length):
             blocks.place(ORANGE_WOOL, rpos(1+x_start, ceiling+y, z))
             blocks.place(ORANGE_WOOL, rpos(length-2+x_start, ceiling+y, z))
             y += 1
-
-# wall
+'''
 h_base = (top-3-bottom) * tan30
-x_start = -4
-blocks.fill(BLOCK_OF_QUARTZ, rpos(1+x_start, 0, -h_base+1), rpos(length-2-x_start, ceiling, h_base-1), FillOperation.HOLLOW)
-blocks.fill(BLOCK_OF_QUARTZ, rpos(0+x_start, 0, -h_base), rpos(length-1-x_start, 1, h_base), FillOperation.HOLLOW)
+box(h_base, -4, length+4)
+
+def box(h_base, x_start, length):
+    # wall
+    x_end = length - x_start
+    blocks.fill(BLOCK_OF_QUARTZ, rpos(1+x_start, 0, -h_base+1), rpos(x_end-2, ceiling, h_base-1), FillOperation.HOLLOW)
+    blocks.fill(BLOCK_OF_QUARTZ, rpos(0+x_start, 0, -h_base), rpos(x_end-1, 1, h_base), FillOperation.HOLLOW)
 
 
 # window
@@ -135,3 +140,4 @@ while zz < h_base - 4:
     blocks.place(GLOWSTONE, rpos(length - 4-x_start, ceiling, zz+1))
     zz += 4
 
+'''
