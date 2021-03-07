@@ -6,13 +6,13 @@ sin30 = 0.5
 cos30 = 0.866
 tan30 = 0.57735026918962576450914878
 
-gameplay.time_set(DayTime.Day)
+gameplay.time_set(DayTime.Night)
 player_position = player.position()
 player.teleport(pos(10, 17, -7))
-for i in range(10):
-    mobs.spawn(COW,rpos(0,0,20))
-    mobs.spawn(CHICKEN,rpos(0,0,20))
-    mobs.spawn(PIG,rpos(0,0,20))
+for i in range(3):
+    mobs.spawn(VILLAGER,rpos(randint(-10,10),0,randint(10,30)))
+    mobs.spawn(HORSE,rpos(randint(-10,10),0,randint(10,30)))
+    mobs.spawn(COW,rpos(randint(-10,10),0,randint(10,30)))
 loops.pause(10*1000)
 
 x_start = 0
@@ -50,6 +50,7 @@ def pavilion():
     p_y += 1
     for i in range(p_height):
         blocks.fill(YELLOW_WOOL, spos(0-i,p_y+i,0+i), spos(-size+1+i,p_y+i,size-1-i), FillOperation.OUTLINE)
+    blocks.place(GLOWSTONE, spos((-size+1)//2, p_y, (size-1)//2))
     top = 15
     length = 7
     bottom = 9
