@@ -1,3 +1,4 @@
+# https://youtu.be/ToqthpbMd_o
 sin60 = 0.866
 cos60 = 0.5
 tan60 = 1.73205
