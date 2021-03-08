@@ -13,10 +13,12 @@ player_position = player.position()
 
 player.teleport(pos(-14, 32, 1))
 # people
-for r in range(10):
-    for c in range(10):
+for r in range(-2,10):
+    for c in range(-2,10):
         x_start = 15+r*10
         z_start = 15+c*10
+        mobs.spawn(VILLAGER, spos(0, 0, 0))
+        mobs.spawn(VILLAGER, spos(0, 0, 0))
         mobs.spawn(VILLAGER, spos(0, 0, 0))
 # pause
 #loops.pause(10*1000)
@@ -67,8 +69,8 @@ for i in range(60):
     blocks.fill(b, rpos(7+(i*2),0,7), rpos(7+(i*2)+1,0,7))
 
 # tents
-for r in range(20):
-    for c in range(10):
+for c in range(10):
+    for r in range(12):
         x_start = 15+r*12
         z_start = 15+c*12
         tent()
@@ -88,6 +90,64 @@ def tent():
     shapes.line(BLOCK_OF_QUARTZ, spos(HEIGHT, 0, -HEIGHT),spos(HEIGHT, HEIGHT, -HEIGHT))
 
 
+
+'''
+for i in range(6):
+    x_start = -7
+    z_start = 15*i
+    pavilion()
+
+def pavilion():
+    global z_start
+    size = 13
+    blocks.fill(GRASS_PATH, spos(0, -1, 0), spos(-size+1, -1, size-1))
+    # pillar
+    p_y = 6
+    shapes.line(BROWN_WOOL, spos(-2,0,2), spos(-2,p_y,2))
+    shapes.line(BROWN_WOOL, spos(-2,0,size-3), spos(-2,p_y,size-3))
+    shapes.line(BROWN_WOOL, spos(-size+3,0,2), spos(-size+3,p_y,2))
+    shapes.line(BROWN_WOOL, spos(-size+3,0,size-3), spos(-size+3,p_y,size-3))
+    #shapes.line(BROWN_WOOL, spos(2,0,-size+2), spos(2,p_y,-size+2))
+    # pyramid
+    p_height = 3
+    p_y += 1
+    for i in range(p_height):
+        blocks.fill(BROWN_WOOL, spos(0-i,p_y+i,0+i), spos(-size+1+i,p_y+i,size-1-i), FillOperation.OUTLINE)
+    # light
+    blocks.place(GLOWSTONE, spos((-size+1)//2, p_y, (size-1)//2))
+    blocks.place(GLOWSTONE, spos((-size+1)//2, p_y, 1+(size-1)//2))
+    blocks.place(GLOWSTONE, spos((-size+1)//2, p_y, -1+(size-1)//2))
+    top = 15
+    length = 7
+    bottom = 9
+    ceiling = bottom 
+    z_start += 6
+    roof(top, bottom, -2-length, length, 0, -1) # 0 -1 means no skip
+
+
+def triangle(top, base_width, x, b):
+    h_base = base_width // 2
+    r = h_base / sin30
+    shapes.line(b, spos(x, top, 0), spos(x, top-r*sin60, h_base))
+    shapes.line(b, spos(x, top, 0), spos(x, top-r*sin60, -h_base))
+    shapes.line(b, spos(x, top-r*sin60, -h_base), spos(x, top-r*sin60, h_base))
+
+def roof(top, bottom, start, length, skip_start, skip_end):
+    # roof
+    h_base = (top-bottom) * tan30
+    base_width = h_base*2
+    ceiling = bottom +1
+
+    for i in range(start, start+length):
+        if skip_start <= i <= skip_end:
+            continue
+        if i == start or i == start+length-1:
+            b = BLOCK_OF_QUARTZ
+        else:
+            b = BROWN_WOOL
+        triangle(top, base_width, i, b)
+
+'''
 
 '''
 for i in range(6):
