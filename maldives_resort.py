@@ -1,8 +1,14 @@
+# seed -80864250
+# python code was transformed from Blocks from Python
+gameplay.time_set(DayTime.Night)
+def on_chat():
+    player.teleport(world(-312, 78, 161))
+player.on_chat("t", on_chat)
 def on_item_interacted():
     global center2, p1, p2, x1, x2, z1, z2, radius, cx, cz
     center2 = player.position()
     player.teleport(world(-304, 97, 223))
-    loops.pause(5*1000)
+    loops.pause(10*1000)
     #player.say(center2)
     #player.say(perim)
     p1 = center2
@@ -33,7 +39,7 @@ def on_item_interacted():
         x1 = coss[i] * (radius + 5)
         z1 = sins[i] * (radius +5)
         for k in range(10):
-            blocks.clone(world(-344, 62+k, 136), world(-350, 62+k, 129), world(cx+x1, y+k, cz+z1), CloneMask.REPLACE, CloneMode.NORMAL)
+            blocks.clone(world(-350, 62+k, 129), world(-344, 62+k, 136), world(cx+x1-3, y+k, cz+z1-3), CloneMask.REPLACE, CloneMode.NORMAL)
         i += 2
 
 def on_item_interacted2():
