@@ -1,0 +1,8 @@
+shapes.circle(WOOL, pos(0, -1, 0), 10, Axis.Y, ShapeOperation.REPLACE)
+shapes.circle(WHITE_STAINED_GLASS, pos(0,-1,0), 10, Axis.Y, ShapeOperation.OUTLINE)
+shapes.circle(WOOL, pos(0, -3, 0), 10, Axis.Y, ShapeOperation.REPLACE)
+shapes.circle(WHITE_STAINED_GLASS, pos(0,-3,0), 10, Axis.Y, ShapeOperation.OUTLINE)
+shapes.circle(WOOL, pos(10, -2, 0), 6, Axis.Y, ShapeOperation.REPLACE)
+shapes.circle(WHITE_STAINED_GLASS, pos(10, -2, 0), 6, Axis.Y, ShapeOperation.OUTLINE)
+shapes.circle(WOOL, pos(-10, -2, 0), 6, Axis.Y, ShapeOperation.REPLACE)
+shapes.circle(WHITE_STAINED_GLASS, pos(-10, -2, 0), 6, Axis.Y, ShapeOperation.OUTLINE)
