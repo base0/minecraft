@@ -1,3 +1,5 @@
+# https://youtu.be/N3HtUblRb5E
+
 #agent.teleport(pos(100, 0, 0), WEST)
 gameplay.time_set(DayTime.Day)
 gameplay.set_weather(CLEAR)
