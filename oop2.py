@@ -12,7 +12,7 @@ class Ball:
     def build(self):
         shapes.sphere(GLASS, pos(self.x, self.y, self.z), self.r, ShapeOperation.REPLACE)
 
-class G (Ball):  
+class ColorfulBall (Ball):  
     def build(self):
         g = [RED_STAINED_GLASS, ORANGE_STAINED_GLASS, YELLOW_STAINED_GLASS, GREEN_STAINED_GLASS, BLUE_STAINED_GLASS, PURPLE_STAINED_GLASS, PINK_STAINED_GLASS]
         shapes.sphere(g[randint(0,6)], pos(self.x, self.y, self.z), self.r, ShapeOperation.OUTLINE)
@@ -25,7 +25,7 @@ for i in range(30):
     hit = True
     while hit:
         hit = False
-        b = G()
+        b = ColorfulBall()
         for j in a:
             if b.hit(j):
                 hit = True
